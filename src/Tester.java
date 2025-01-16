@@ -6,11 +6,12 @@ public class Tester {
         int[] sorted_selection_max = SelectionSort_MaxValue.SelectionSort(testArray);
         int[] sorted_selection_double = SelectionSort_DoubleValue.SelectionSort(testArray);
         int[] sorted_insertion = InsertionSort.InsertionSort(testArray);
-        printResults(sorted_bubble, sorted_selection_min, sorted_selection_max, sorted_selection_double, sorted_insertion);
+        int[] own_sort = OwnSort.OwnSort(testArray);
+        printResults(sorted_bubble, sorted_selection_min, sorted_selection_max, sorted_selection_double, sorted_insertion, own_sort);
 
     }
 
-    public static void printResults(int[] sorted_bubble, int[] sorted_selection_min,int[] sorted_selection_max, int[] sorted_selection_double, int[] sorted_insertion){
+    public static void printResults(int[] sorted_bubble, int[] sorted_selection_min,int[] sorted_selection_max, int[] sorted_selection_double, int[] sorted_insertion, int[] own_sort){
         System.out.println("Bubble Sort");
         for(int s : sorted_bubble) System.out.print(s + ", ");
         System.out.println();
@@ -25,6 +26,9 @@ public class Tester {
         System.out.println();
         System.out.println("Insertion Sort");
         for(int s : sorted_insertion) System.out.print(s + ", ");
+        System.out.println();
+        System.out.println("Own Sort");
+        for(int s : own_sort) System.out.print(s + ", ");
         System.out.println();
     }
 }
